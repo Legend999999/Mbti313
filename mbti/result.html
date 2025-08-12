@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+  <meta charset="UTF-8" />
+  <title>ئەنجامی MBTI</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 2rem auto; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>شێوازی تایبەتی تۆیە:</h1>
+  <p id="mbti-type" style="font-size: 2rem; font-weight: bold;"></p>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const type = params.get("type") || "Unknown";
+    document.getElementById("mbti-type").textContent = type;
+  </script>
+</body>
+</html>
