@@ -4,12 +4,49 @@
   <meta charset="UTF-8" />
   <title>ئەنجامی MBTI</title>
   <style>
-    body { font-family: sans-serif; max-width: 600px; margin: 2rem auto; text-align: center; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url("pexels-joaojesusdesign-925743.jpg") no-repeat center center fixed;
+      background-size: cover;
+      background-position: 50% 49%; /* desktop default */
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+      padding: 50px;
+      margin: 10px;
+    }
+
+
+    .container {
+      background: rgba(0, 0, 0, 0.8);
+      padding: 5rem 5rem;
+      border-radius: 69px;
+      box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+      text-align: center;
+      max-width: 500px;
+      width: 100%;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+    #mbti-type {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #ffffff;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body>
-  <h1>شێوازی تایبەتی تۆیە:</h1>
-  <p id="mbti-type" style="font-size: 2rem; font-weight: bold;"></p>
+  <div class="container">
+    <h1>ئەمە کەسایەتی تۆیە</h1>
+    <p id="mbti-type"></p>
+  </div>
 
   <script>
     const params = new URLSearchParams(window.location.search);
