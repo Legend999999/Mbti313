@@ -50,8 +50,21 @@ function renderQuestion() {
       // When a choice is clicked, show scale buttons
       renderScale(q.functions[idx], (scaleValue) => {
         // Record the choice + scale value
-        answers[currentIndex] = { choiceIdx: idx, scaleValue: scaleValue };
-        functionScores[q.functions[idx]] += scaleValue; // add scale score
+      // Remove old score if it exists
+if (answers[currentIndex] !== null) {
+  const oldFunc = q.functions[answers[currentIndex].choiceIdx];
+  const oldValue = answers[currentIndex].scaleValue;
+  functionScores[oldFunc] -= oldValue;
+}
+
+// Save new answer
+answers[currentIndex] = { choiceIdx: idx, scaleValue: scaleValue };
+
+// Add new score
+functionScores[q.functions[idx].name] += q.functions[idx].scale[scaleValue];
+
+
+
         updateSelection();
         nextBtn.disabled = false;
       });
