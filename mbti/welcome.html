@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ku">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome MBTI Test</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url("pexels-zetong-li-880728-18780512.jpg") no-repeat center center fixed;
+      background-size: cover;
+      background-position: 50% 49%;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+      padding: 50px;
+      margin: 10px;
+    }
+
+    .container {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 3rem 2rem; /* smaller on mobile */
+  border-radius: 30px;
+  box-shadow: 0 8px 20px rgba(255, 0, 0, 0.3);
+  text-align: center;
+  max-width: 90%; /* allows more space on small screens */
+  width: 100%;
+}
+
+
+    h1 {
+      font-size: 1rem;
+      margin-bottom: 6rem;
+      color: #ffffff;
+    }
+
+    p {
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+
+      white-space: pre-wrap;
+  word-wrap: break-word;
+  line-height: 1.2;
+    }
+    @media (max-width: 600px) {
+  h1 {
+    margin-bottom: 2rem;
+    font-size: 1.5rem;
+  }
+  p {
+    width: 260px;
+  font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+
+    button {
+      background: #ff0000;
+      border: none;
+      color: white;
+      padding: 1rem 2rem;
+      margin: 1rem;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #ff5555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <p>ئەگەر دەتەوێت کەسایەتی خۆتت بۆ دەربچێت جوان ئەمە بخوێنەوە </p>
+    <p id="instructions" style="display:none;">
+
+       لەبیرت بێت هەموو ئەم سیفەتانە ئەتوانن لە قۆناغێکی ژیاندا هەر کەسێک بگرێتەوە.
+      
+     بۆ نموونە کەسێک کە بەزۆری بێبڕیار بێت،
+       دەتوانێت ببێتە یەکلاکەرەوە ئەگەر دۆخەکە ژیان یان مردن بێت یان ئەگەر کارەکەی پێویستی پێی بێت. 
+       
+    
+       بۆیە ئەگەر ئەتەوێت کەسایەتی خۆتت بە جوانی بۆ دەربچێت جوان گوێ بگرە
+      
+      یەکەم ئەوەیە ئەو دوو وەڵامەی دانراوە زۆر لە یەک ئەچن جوان هەردووکی بخوێنەوە بزانە کامەت تێدایە
+      
+      
+     
+     دوای ئەوەی کە زانیت کامیانت تێدایە ئەوە ٤ دوگمەت بۆ دەر ئەچێت بە پێی ئەوەی کە لەگەلت ئەگونجێت دای ئەنێیت
+      
+
+     سروشتی خۆت چۆنە ئەو وەڵامە هەڵبژێرە
+نەک ئەوەی لە خۆتدا ئەیبینیتەوە بەهۆی کاریگەری کەسانی تر گۆڕاوە 
+
+
+    با بڵێین دوو هەڵبژاردەکە هیچیان لە تۆ نەچوو ئەوکات و کەم هەڵدەبژێریت  
+     
+    گرنگە پێش هەموو هەڵبژاردنەکان جوان بیخوێنەوە لە مۆبایلەکەتدا
+      
+       </p>
+    <button id="start-btn">باشە</button>
+    <button id="ready-btn" style="display:none;" onclick="location.href='index.html'">ئامادەم</button>
+  </div>
+
+  <script>
+    const startBtn = document.getElementById("start-btn");
+    const instructions = document.getElementById("instructions");
+    const readyBtn = document.getElementById("ready-btn");
+
+    startBtn.onclick = () => {
+      instructions.style.display = "block";
+      readyBtn.style.display = "inline-block";
+      startBtn.style.display = "none";
+    };
+  </script>
+</body>
+</html>
